@@ -18,6 +18,8 @@ while sair != 's'
         indice += 1
     end 
 end
+
+#imprimindo os cadastros
 indice = 0
 while indice < alunos.length
     puts "#{alunos[indice][:nome]} tirou nota #{alunos[indice][:nota]} em #{alunos[indice][:disciplina]}"
