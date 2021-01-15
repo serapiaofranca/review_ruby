@@ -1,22 +1,17 @@
-class Professor
+#!/usr/bin/env ruby
 
-    attr_reader :ferias, :data_inicio_ferias, :data_termino_ferias
-    attr_accessor :nome, :codigo_funcionario, :disciplina
+require_relative 'funcionario'
 
-    def initialize (nome, codigo, disciplina)
-        @nome = nome
-        @codigo_funcionario = codigo
-        @disciplina = disciplina
-        @ferias = false
+class Professor < Funcionario
+
+    attr_accessor :disciplina
+
+    def initialize (nome, codigo_funcionario,disciplina)
+        super(nome, codigo_funcionario)
+        @disciplina = disciplina        
     end
 
-    def inicia_ferias()
-        @ferias = true
-        @data_inicio_ferias = Time.now()
-    end
-
-    def encerrar_ferias()
-        @ferias = false
-        @data_termino_ferias = Time.now()
+    def imprime_funcionario()
+        puts "Codigo: #{codigo_funcionario} ; Professor: #{nome} ; Disciplina: #{disciplina} ; Ferias: #{ferias}" 
     end
 end

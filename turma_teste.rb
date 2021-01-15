@@ -20,5 +20,7 @@ turma2E = Turma.new("Segundo E", 15, marcela)
 turma2E.adiciona_aluno(ivan)
 puts turma2E.inspect
 
+marcela.imprime_funcionario()
+
 andre = "Andre dos Santos"
 #turma1A.alunos = (andre)
